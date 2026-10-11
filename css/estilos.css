@@ -1,0 +1,104 @@
+
+/* Colores del restaurante */
+:root {
+    --dorado: #ffc107e1;         /* relleno de botones y lineas */
+    --dorado-claro: #ffd24d;   /* texto sobre fondo oscuro */
+    --dorado-oscuro: #8a6a1f;  /* texto sobre fondo claro (buen contraste) */
+    --vino: #c0404e;           /* hover de botones */
+    --vino-oscuro: #c0404fd5;    /* botones apretados */
+}
+
+/* Letra elegante para titulos y logo */
+.fuente-titulo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Separacion entre letras (menu y textos chicos) */
+.espaciado {
+    letter-spacing: 0.08em;
+}
+
+/* Dorado (Bootstrap no trae este color) */
+.text-dorado {
+    color: var(--dorado-oscuro) !important;
+}
+
+.text-dorado-claro {
+    color: var(--dorado-claro) !important;
+}
+
+.border-dorado {
+    border-color: var(--dorado) !important;
+}
+
+/* Boton dorado: normal, hover y apretado (variables de Bootstrap) */
+.btn-dorado {
+    --bs-btn-bg: var(--dorado);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-color: #1c1917;
+
+    --bs-btn-hover-bg: var(--vino);
+    --bs-btn-hover-border-color: var(--vino);
+    --bs-btn-hover-color: #fff;
+
+    --bs-btn-active-bg: var(--vino-oscuro);
+    --bs-btn-active-border-color: var(--vino-oscuro);
+    --bs-btn-active-color: #fff;
+}
+
+/* Boton con contorno dorado */
+.btn-outline-dorado {
+    --bs-btn-color: var(--dorado-oscuro);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-hover-bg: var(--dorado);
+    --bs-btn-hover-border-color: var(--dorado);
+    --bs-btn-hover-color: #1c1917;
+    --bs-btn-active-bg: var(--dorado);
+    --bs-btn-active-border-color: var(--dorado);
+    --bs-btn-active-color: #1c1917;
+}
+
+/* Menu transparente sobre la portada (sombra arriba para que se lea) */
+.nav-transparente {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+/* Links del menu: claros y legibles sobre la foto */
+.navbar .nav-link {
+    color: rgba(255, 255, 255, .85) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+}
+
+/* Link de la vista actual */
+.navbar .nav-link.active {
+    color: #fff !important;
+}
+
+/* Hover del menu: dorado claro */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--dorado-claro) !important;
+}
+
+/* En pantallas chicas el menu y la portada llevan fondo parejo */
+@media (max-width: 991.98px) {
+    .nav-transparente {
+        background: #0f0a07;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .degradado-hero {
+        background: rgba(10, 6, 3, 0.68);
+    }
+}
+
+/* Capa oscura sobre la portada: mas fuerte al centro, donde esta el texto */
+.degradado-hero {
+    background: radial-gradient(ellipse at center, rgba(10, 6, 3, 0.8) 0%, rgba(10, 6, 3, 0.55) 60%, rgba(10, 6, 3, 0.4) 100%);
+}
+
+/* separa el contenido de las vistas del menu fijo */
+.pt-nav {
+    padding-top: 5.5rem;
+}
